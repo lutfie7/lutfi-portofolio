@@ -7,6 +7,49 @@
   <!-- AOS (Animate on Scroll) -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
   <style>
+
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background: rgba(0,0,0,0.85);
+  box-shadow: 0 2px 10px rgba(0,0,0,0); /* default transparan */
+  transition: 
+    top 0.3s ease,
+    opacity 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.logo-spacex {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  font-size: 1.5em;
+  letter-spacing: 4px;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+}
+
+.logo-spacex span {
+  position: relative;
+  color: #00ffd5;
+}
+
+.logo-spacex span::after {
+  content: "";
+  position: absolute;
+  width: 35px;        /* Lebar garis dipendekkan */
+  height: 2px;
+  background: #00ffd5;
+  top: 45%;           /* Sedikit lebih turun */
+  left: 2px;          /* Geser ke kanan */
+  transform: rotate(25deg);
+}
+
+
 /* Navbar SpaceX style */
 .navbar {
   position: fixed;
@@ -45,14 +88,42 @@
 }
 
 .nav-links li a {
+  position: relative;
   color: #fff;
   text-decoration: none;
   font-weight: bold;
+  padding: 5px 0;
+  transition: color 0.3s ease;
 }
 
-.nav-links li a:hover {
-  color: #00ffd5;
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #00ffd5;
+  transform: scaleX(0);
+  transform-origin: left; /* Mulai dari kiri */
+  transition: transform 0.3s ease, transform-origin 0s 0.3s;
 }
+
+/* Saat hover, garis muncul */
+.nav-links li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left; /* Tetap mulai dari kiri */
+  transition: transform 0.3s ease;
+}
+
+/* Saat hover keluar, ubah origin jadi right supaya hilang ke kanan */
+.nav-links li a:not(:hover)::after {
+  transform-origin: right; /* Hilang ke kanan */
+  transition: transform 0.3s ease, transform-origin 0s;
+}
+
+
+
 
 .menu-icon {
   display: none;
@@ -179,15 +250,47 @@
       header h1 {font-size:2em;}
       nav a {display:block; margin:10px 0;}
     }
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px; /* Tinggi navbar */
+    right: 20px; /* Menempel di kanan */
+    background: rgba(0,0,0,0.95);
+    border-radius: 4px;
+    padding: 10px 15px; /* Jangan terlalu besar supaya proporsional */
+    flex-direction: column;
+    align-items: flex-end; /* Teks rata kanan */
+    text-align: right;
+    width: max-content; /* Hanya selebar konten */
+    min-width: unset; /* Supaya nggak dipaksa lebar */
+    max-width: 200px; /* Opsional, batas maksimum */
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 999;
+  }
+
+  .nav-links.show {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+    white-space: nowrap; /* Supaya teks tidak pecah baris */
+  }
+}
+
+
   </style>
 </head>
 <body>
-  <nav class="navbar">
+  <nav id="navbar" class="navbar">
   <div class="nav-container">
-    <a href="index.html" class="logo">LUTFI</a>
-    <div class="menu-icon" onclick="toggleMenu()">
-      &#9776;
-    </div>
+    <a href="index.html" class="logo-spacex">LUTFI<span>R</span></a>
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html">Beranda</a></li>
       <li><a href="index.html#about">Tentang</a></li>
@@ -200,10 +303,10 @@
 </nav>
 
   <header>
-    <h1 data-aos="fade-down">Lutfi Rochman</h1>
+    <h1 data-aos="fade-down">Lutfi Rahman</h1>
   </header>
 
-  <section id="about" data-aos="fade-up">
+  <section id="about" data-aos="fade-up" data-aos-once="false">
     <h2>Tentang Saya</h2>
     <p>
       Saya memiliki antusias di bidang teknologi dan layanan komputer. 
@@ -212,7 +315,7 @@
     </p>
   </section>
 
-  <section id="skills" data-aos="fade-up">
+  <section id="skills" data-aos="fade-up" data-aos-once="false">
     <h2>Keahlian</h2>
     <ul>
       <li>Computer Service & Troubleshooting</li>
@@ -221,14 +324,14 @@
     </ul>
   </section>
 
-  <section id="projects" class="projects" data-aos="fade-up">
+  <section id="projects" class="projects" data-aos="fade-up" data-aos-once="false">
     <h2>Portofolio</h2>
     <a href="https://drive.google.com/drive/folders/1uwTnRPgcXAVeyHMY84hA8JvO1xgKh35R?usp=sharing" target="_blank">
       <img src="https://via.placeholder.com/1000x500?text=Portofolio+Dokumen" alt="Portofolio">
     </a>
   </section>
 
-  <section id="contact" data-aos="fade-up">
+  <section id="contact" data-aos="fade-up" data-aos-once="false">
     <h2>Kontak</h2>
     <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
       <input type="text" name="name" placeholder="Nama Anda" required>
@@ -246,13 +349,45 @@
   <!-- AOS Script -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init();
+    AOS.init({
+  once: false // semua animasi repeat
+});
+
   </script>
 <script>
   function toggleMenu() {
     var nav = document.getElementById("navLinks");
     nav.classList.toggle("show");
   }
+</script>
+
+<script>
+  let prevScrollPos = window.pageYOffset;
+
+window.onscroll = function() {
+  const currentScrollPos = window.pageYOffset;
+  const navbar = document.getElementById("navbar");
+  const navLinks = document.getElementById("navLinks");
+
+  const isMenuOpen = navLinks.classList.contains("show");
+
+  if (!isMenuOpen) {
+    if (prevScrollPos > currentScrollPos) {
+      // Scroll up: tampilkan navbar
+      navbar.style.top = "0";
+      navbar.style.opacity = "1";
+      navbar.style.boxShadow = "0 2px 10px rgba(0,0,0,0.5)";
+    } else {
+      // Scroll down: sembunyikan navbar
+      navbar.style.top = "-80px";
+      navbar.style.opacity = "0";
+      navbar.style.boxShadow = "0 2px 10px rgba(0,0,0,0)";
+    }
+  }
+
+  prevScrollPos = currentScrollPos;
+}
+
 </script>
 
 </body>
