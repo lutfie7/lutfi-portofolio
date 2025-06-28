@@ -4,205 +4,36 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lutfi Rochman - Portofolio</title>
-  <!-- AOS (Animate on Scroll) -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
   <style>
-
-#navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 999;
-  background: rgba(0,0,0,0.85);
-  box-shadow: 0 2px 10px rgba(0,0,0,0); /* default transparan */
-  transition: 
-    top 0.3s ease,
-    opacity 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-
-.logo-spacex {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 700;
-  font-size: 1.5em;
-  letter-spacing: 4px;
-  color: #fff;
-  text-transform: uppercase;
-  position: relative;
-  display: inline-block;
-}
-
-.logo-spacex span {
-  position: relative;
-  color: #00ffd5;
-}
-
-.logo-spacex span::after {
-  content: "";
-  position: absolute;
-  width: 35px;        /* Lebar garis dipendekkan */
-  height: 2px;
-  background: #00ffd5;
-  top: 45%;           /* Sedikit lebih turun */
-  left: 2px;          /* Geser ke kanan */
-  transform: rotate(25deg);
-}
-
-
-/* Navbar SpaceX style */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(0,0,0,0.8);
-  z-index: 999;
-}
-
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.logo {
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #fff;
-  text-decoration: none;
-  letter-spacing: 2px;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links li {
-  margin-left: 20px;
-}
-
-.nav-links li a {
-  position: relative;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 5px 0;
-  transition: color 0.3s ease;
-}
-
-.nav-links li a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 2px;
-  width: 100%;
-  background-color: #00ffd5;
-  transform: scaleX(0);
-  transform-origin: left; /* Mulai dari kiri */
-  transition: transform 0.3s ease, transform-origin 0s 0.3s;
-}
-
-/* Saat hover, garis muncul */
-.nav-links li a:hover::after {
-  transform: scaleX(1);
-  transform-origin: left; /* Tetap mulai dari kiri */
-  transition: transform 0.3s ease;
-}
-
-/* Saat hover keluar, ubah origin jadi right supaya hilang ke kanan */
-.nav-links li a:not(:hover)::after {
-  transform-origin: right; /* Hilang ke kanan */
-  transition: transform 0.3s ease, transform-origin 0s;
-}
-
-
-
-
-.menu-icon {
-  display: none;
-  font-size: 1.8em;
-  color: #fff;
-  cursor: pointer;
-}
-
-/* Responsive: show hamburger */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: rgba(0,0,0,0.9);
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 200px;
-    text-align: right;
-    padding: 10px;
-    border-radius: 4px;
-  }
-  .nav-links.show {
-    display: flex;
-  }
-  .nav-links li {
-    margin: 10px 0;
-  }
-  .menu-icon {
-    display: block;
-  }
-}
-
     body, html {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #000;
-      color: #fff;
-      scroll-behavior: smooth;
+      margin:0;
+      padding:0;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background:#000;
+      color:#fff;
+      scroll-behavior:smooth;
     }
     header {
-      position: relative;
-      background: url('https://images.unsplash.com/photo-1549921296-3c701d6f4de3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
+      background:url('https://images.unsplash.com/photo-1549921296-3c701d6f4de3?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+      height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      position:relative;
     }
     header::before {
-      content: "";
-      position: absolute;
+      content:"";
+      position:absolute;
       top:0; left:0; right:0; bottom:0;
-      background: rgba(0,0,0,0.6);
+      background:rgba(0,0,0,0.6);
     }
     header h1 {
-      position: relative;
-      font-size: 3em;
-      letter-spacing: 2px;
-      margin: 0;
-    }
-    nav {
-      position: fixed;
-      top:0;
-      width:100%;
-      background: rgba(0,0,0,0.8);
-      text-align:center;
-      padding:15px;
-      z-index:10;
-    }
-    nav a {
-      color:#fff;
-      text-decoration:none;
-      margin:0 15px;
-      font-weight:bold;
-    }
-    nav a:hover {
-      color:#00ffd5;
+      position:relative;
+      font-size:3em;
+      letter-spacing:2px;
+      margin:0;
     }
     section {
       padding:80px 20px;
@@ -215,107 +46,141 @@
       display:inline-block;
       margin-bottom:20px;
     }
-    .projects img {
-      width:100%;
-      border-radius:8px;
-      margin-top:20px;
-    }
-    form input, form textarea {
-      width:100%;
-      padding:10px;
-      margin-top:8px;
-      margin-bottom:15px;
-      border:none;
-      border-radius:4px;
-    }
-    form button {
-      background:#00ffd5;
-      color:#000;
-      padding:10px 20px;
-      border:none;
-      border-radius:4px;
-      font-weight:bold;
-      cursor:pointer;
-    }
-    form button:hover {
-      background:#00cfa6;
-    }
     footer {
       text-align:center;
       padding:30px;
       background:#111;
       font-size:0.9em;
     }
-    @media(max-width:600px){
-      header h1 {font-size:2em;}
-      nav a {display:block; margin:10px 0;}
+    .logo-spacex {
+      font-weight:700;
+      font-size:1.5em;
+      letter-spacing:4px;
+      color:#fff;
+      text-transform:uppercase;
+      position:relative;
+      display:inline-block;
     }
-@media (max-width: 768px) {
-  .nav-links {
-    position: absolute;
-    top: 60px; /* Tinggi navbar */
-    right: 20px; /* Menempel di kanan */
-    background: rgba(0,0,0,0.95);
-    border-radius: 4px;
-    padding: 10px 15px; /* Jangan terlalu besar supaya proporsional */
-    flex-direction: column;
-    align-items: flex-end; /* Teks rata kanan */
-    text-align: right;
-    width: max-content; /* Hanya selebar konten */
-    min-width: unset; /* Supaya nggak dipaksa lebar */
-    max-width: 200px; /* Opsional, batas maksimum */
-    transform: translateY(-20px);
-    opacity: 0;
-    pointer-events: none;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    z-index: 999;
-  }
-
-  .nav-links.show {
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  .nav-links li {
-    margin: 10px 0;
-    white-space: nowrap; /* Supaya teks tidak pecah baris */
-  }
-}
-
-
+    .logo-spacex span {
+      position:relative;
+      color:#00ffd5;
+    }
+    .logo-spacex span::after {
+      content:"";
+      position:absolute;
+      width:35px;
+      height:2px;
+      background:#00ffd5;
+      top:45%;
+      left:2px;
+      transform:rotate(25deg);
+    }
+    /* Navbar Base */
+    #navbar {
+      position:fixed;
+      top:0;
+      width:100%;
+      background:rgba(0,0,0,0.85);
+      transition:top 0.3s ease, opacity 0.3s ease;
+      z-index:999;
+    }
+    .nav-container {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:10px 20px;
+      max-width:1200px;
+      margin:auto;
+    }
+    .nav-links {
+      list-style:none;
+      display:flex;
+      margin:0;
+      padding:0;
+    }
+    .nav-links li {
+      margin-left:20px;
+    }
+    .nav-links li a {
+      position:relative;
+      color:#fff;
+      text-decoration:none;
+      font-weight:bold;
+      padding:5px 0;
+      transition:color 0.3s ease;
+    }
+    .nav-links li a::after {
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:0;
+      height:2px;
+      width:100%;
+      background:#00ffd5;
+      transform:scaleX(0);
+      transform-origin:left;
+      transition:transform 0.3s ease, transform-origin 0s 0.3s;
+    }
+    .nav-links li a:hover::after {
+      transform:scaleX(1);
+      transform-origin:left;
+      transition:transform 0.3s ease;
+    }
+    .nav-links li a:not(:hover)::after {
+      transform-origin:right;
+      transition:transform 0.3s ease, transform-origin 0s;
+    }
+    .menu-icon {
+      display:none;
+      font-size:1.8em;
+      color:#fff;
+      cursor:pointer;
+    }
+    @media(max-width:768px){
+      .nav-links {
+        position:absolute;
+        top:60px;
+        right:20px;
+        background:rgba(0,0,0,0.95);
+        border-radius:4px;
+        padding:10px 15px;
+        flex-direction:column;
+        align-items:flex-end;
+        text-align:right;
+        width:max-content;
+        transform:translateY(-20px);
+        opacity:0;
+        pointer-events:none;
+        transition:transform 0.3s ease, opacity 0.3s ease;
+      }
+      .nav-links.show {
+        transform:translateY(0);
+        opacity:1;
+        pointer-events:auto;
+      }
+      .nav-links li {
+        margin:10px 0;
+        white-space:nowrap;
+      }
+      .menu-icon {
+        display:block;
+      }
+    }
   </style>
 </head>
 <body>
-  <nav id="navbar" class="navbar">
-  <div class="nav-container">
-    <a href="index.html" class="logo-spacex">LUTFI<span>R</span></a>
-    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Beranda</a></li>
-      <li><a href="index.html#about">Tentang</a></li>
-      <li><a href="index.html#skills">Keahlian</a></li>
-      <li><a href="index.html#projects">Portofolio</a></li>
-      <li><a href="galeri.html">Galeri</a></li>
-      <li><a href="index.html#contact">Kontak</a></li>
-    </ul>
-  </div>
-</nav>
+  <div id="include-navbar"></div>
 
   <header>
-    <h1 data-aos="fade-down">Lutfi Rahman</h1>
+    <h1 data-aos="fade-down">Lutfi Rochman</h1>
   </header>
 
-  <section id="about" data-aos="fade-up" data-aos-once="false">
+  <section id="about" data-aos="fade-up">
     <h2>Tentang Saya</h2>
-    <p>
-      Saya memiliki antusias di bidang teknologi dan layanan komputer. 
-      Saya telah membangun reputasi sebagai teknisi yang andal, khususnya dalam perbaikan komputer serta penyediaan solusi jaringan.
-      Saya senantiasa memberikan dukungan yang bernilai bagi klien yang memerlukan bantuan terkait kebutuhan komputer mereka.
-    </p>
+    <p>Saya memiliki antusias di bidang teknologi dan layanan komputer. Saya telah membangun reputasi sebagai teknisi yang andal, khususnya dalam perbaikan komputer serta penyediaan solusi jaringan.</p>
   </section>
 
-  <section id="skills" data-aos="fade-up" data-aos-once="false">
+  <section id="skills" data-aos="fade-up">
     <h2>Keahlian</h2>
     <ul>
       <li>Computer Service & Troubleshooting</li>
@@ -324,71 +189,47 @@
     </ul>
   </section>
 
-  <section id="projects" class="projects" data-aos="fade-up" data-aos-once="false">
-    <h2>Portofolio</h2>
-    <a href="https://drive.google.com/drive/folders/1uwTnRPgcXAVeyHMY84hA8JvO1xgKh35R?usp=sharing" target="_blank">
-      <img src="https://via.placeholder.com/1000x500?text=Portofolio+Dokumen" alt="Portofolio">
-    </a>
-  </section>
+  <div id="include-footer"></div>
 
-  <section id="contact" data-aos="fade-up" data-aos-once="false">
-    <h2>Kontak</h2>
-    <form action="https://formspree.io/f/xyzjlbgw" method="POST">
-      <input type="text" name="name" placeholder="Nama Anda" required>
-      <input type="email" name="_replyto" placeholder="Email Anda" required>
-      <textarea name="message" rows="4" placeholder="Pesan Anda" required></textarea>
-      <button type="submit">Kirim Pesan</button>
-    </form>
-    <p>Atau hubungi via WhatsApp: <a href="https://wa.me/6285728762595" style="color:#00ffd5;">0857-2876-2595</a></p>
-  </section>
-
-  <footer>
-    Lutfi &copy; 2025. All Rights Reserved.
-  </footer>
-
-  <!-- AOS Script -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init({
-  once: false // semua animasi repeat
-});
-
+    AOS.init({ once: false });
   </script>
-<script>
-  function toggleMenu() {
-    var nav = document.getElementById("navLinks");
-    nav.classList.toggle("show");
-  }
-</script>
-
-<script>
-  let prevScrollPos = window.pageYOffset;
-
-window.onscroll = function() {
-  const currentScrollPos = window.pageYOffset;
-  const navbar = document.getElementById("navbar");
-  const navLinks = document.getElementById("navLinks");
-
-  const isMenuOpen = navLinks.classList.contains("show");
-
-  if (!isMenuOpen) {
-    if (prevScrollPos > currentScrollPos) {
-      // Scroll up: tampilkan navbar
-      navbar.style.top = "0";
-      navbar.style.opacity = "1";
-      navbar.style.boxShadow = "0 2px 10px rgba(0,0,0,0.5)";
-    } else {
-      // Scroll down: sembunyikan navbar
-      navbar.style.top = "-80px";
-      navbar.style.opacity = "0";
-      navbar.style.boxShadow = "0 2px 10px rgba(0,0,0,0)";
+  <script>
+    function loadHTML(id, url) {
+      fetch(url)
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById(id).innerHTML = data;
+        })
+        .then(() => {
+          if(id === "include-navbar"){
+            const menuIcon = document.querySelector(".menu-icon");
+            const navLinks = document.getElementById("navLinks");
+            menuIcon.addEventListener("click", () => {
+              navLinks.classList.toggle("show");
+            });
+            let prevScrollPos = window.pageYOffset;
+            window.onscroll = function() {
+              const currentScrollPos = window.pageYOffset;
+              const navbar = document.getElementById("navbar");
+              const isMenuOpen = navLinks.classList.contains("show");
+              if (!isMenuOpen) {
+                if (prevScrollPos > currentScrollPos) {
+                  navbar.style.top = "0";
+                  navbar.style.opacity = "1";
+                } else {
+                  navbar.style.top = "-80px";
+                  navbar.style.opacity = "0";
+                }
+              }
+              prevScrollPos = currentScrollPos;
+            }
+          }
+        });
     }
-  }
-
-  prevScrollPos = currentScrollPos;
-}
-
-</script>
-
+    loadHTML("include-navbar", "navbar.html");
+    loadHTML("include-footer", "footer.html");
+  </script>
 </body>
 </html>
