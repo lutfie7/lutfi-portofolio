@@ -7,6 +7,85 @@
   <!-- AOS (Animate on Scroll) -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
   <style>
+/* Navbar SpaceX style */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.8);
+  z-index: 999;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links li a:hover {
+  color: #00ffd5;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.8em;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Responsive: show hamburger */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: rgba(0,0,0,0.9);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    text-align: right;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  .nav-links li {
+    margin: 10px 0;
+  }
+  .menu-icon {
+    display: block;
+  }
+}
+
     body, html {
       margin:0;
       padding:0;
@@ -88,14 +167,23 @@
   </style>
 </head>
 <body>
-  <nav>
-    <a href="index.html">Beranda</a>
-    <a href="index.html#about">Tentang</a>
-    <a href="index.html#skills">Keahlian</a>
-    <a href="index.html#projects">Portofolio</a>
-    <a href="galeri.html">Galeri</a>
-    <a href="index.html#contact">Kontak</a>
-  </nav>
+  <nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">LUTFI</a>
+    <div class="menu-icon" onclick="toggleMenu()">
+      &#9776;
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="index.html#about">Tentang</a></li>
+      <li><a href="index.html#skills">Keahlian</a></li>
+      <li><a href="index.html#projects">Portofolio</a></li>
+      <li><a href="galeri.html">Galeri</a></li>
+      <li><a href="index.html#contact">Kontak</a></li>
+    </ul>
+  </div>
+</nav>
+
 
   <header>
     <h1 data-aos="fade-down">Galeri Proyek</h1>
@@ -123,5 +211,12 @@
   <script>
     AOS.init();
   </script>
+<script>
+  function toggleMenu() {
+    var nav = document.getElementById("navLinks");
+    nav.classList.toggle("show");
+  }
+</script>
+
 </body>
 </html>
