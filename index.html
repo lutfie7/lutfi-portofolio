@@ -6,6 +6,20 @@
   <title>Lutfi Rochman - Portofolio</title>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
   <style>
+
+html, body {
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.wrapper > *:last-child {
+  margin-top: auto;
+}
+
 section form {
   display:flex;
   flex-direction:column;
@@ -197,6 +211,7 @@ section form button:hover {
   </style>
 </head>
 <body>
+<div class="wrapper">
   <div id="include-navbar"></div>
 
   <header>
@@ -232,9 +247,8 @@ section form button:hover {
     <button type="submit">Kirim Pesan</button>
   </form>
 </section>
-
-
   <div id="include-footer"></div>
+</div>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
