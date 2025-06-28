@@ -4,110 +4,135 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lutfi Rochman - Portofolio</title>
+  <!-- AOS Animasi -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f8f7;
-      color: #333;
       margin: 0;
-      padding: 0;
+      background: #f4f8f7;
+      color: #333;
     }
     header {
-      background-color: #a6e3d2;
-      color: #064e3b;
-      padding: 30px 20px;
+      background: #a6e3d2;
+      padding: 60px 20px;
       text-align: center;
     }
     header h1 {
       margin: 0;
-      font-size: 2em;
+      font-size: 2.5em;
+      color: #064e3b;
     }
     header p {
-      margin: 5px 0 0;
-      font-size: 1.1em;
+      font-size: 1.2em;
+      color: #065f46;
     }
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 30px auto;
       padding: 0 20px;
     }
     .section {
-      margin-bottom: 40px;
+      margin-bottom: 50px;
     }
     .section h2 {
       color: #065f46;
       border-bottom: 2px solid #a6e3d2;
       padding-bottom: 5px;
     }
-    .projects a {
+    .projects a, .contact button {
       display: inline-block;
-      background-color: #a6e3d2;
+      background: #a6e3d2;
       color: #064e3b;
-      padding: 10px 15px;
-      margin: 10px 0;
+      padding: 12px 20px;
+      margin-top: 10px;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 6px;
+      transition: background 0.3s;
+      border: none;
+      cursor: pointer;
     }
-    .contact a {
-      color: #065f46;
-      text-decoration: none;
-      font-weight: bold;
+    .projects a:hover, .contact button:hover {
+      background: #7ad1b9;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
     }
     footer {
       text-align: center;
       padding: 20px;
-      background-color: #e1f4ef;
-      color: #333;
+      background: #e1f4ef;
       font-size: 0.9em;
+    }
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 {font-size: 1.8em;}
+      header p {font-size: 1em;}
     }
   </style>
 </head>
 <body>
-  <header>
+  <header data-aos="fade-down">
     <h1>Lutfi Rochman</h1>
     <p>Teknisi Komputer & Penyedia Solusi Jaringan</p>
   </header>
 
   <div class="container">
-    <div class="section about">
+    <section class="section about" data-aos="fade-up">
       <h2>Tentang Saya</h2>
       <p>
-        Saya memiliki antusias di bidang teknologi dan layanan komputer. 
-        Saya telah membangun reputasi sebagai teknisi yang andal, khususnya dalam perbaikan komputer serta penyediaan solusi jaringan. 
+        Saya memiliki antusias di bidang teknologi dan layanan komputer.
+        Saya telah membangun reputasi sebagai teknisi yang andal, khususnya dalam perbaikan komputer serta penyediaan solusi jaringan.
         Saya senantiasa memberikan dukungan yang bernilai bagi klien yang memerlukan bantuan terkait kebutuhan komputer mereka.
       </p>
-    </div>
+    </section>
 
-    <div class="section skills">
+    <section class="section skills" data-aos="fade-up">
       <h2>Keahlian</h2>
       <ul>
         <li>Computer Service & Troubleshooting</li>
         <li>Solusi Jaringan & Konfigurasi</li>
         <li>Dukungan Teknis IT</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="section experience">
+    <section class="section experience" data-aos="fade-up">
       <h2>Pengalaman</h2>
       <ul>
         <li>Teknisi di Connect Computer</li>
         <li>Teknisi di Vendor IT Service: ITSC dan SMI</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="section projects">
+    <section class="section projects" data-aos="fade-up">
       <h2>Portofolio</h2>
       <a href="https://drive.google.com/drive/folders/1uwTnRPgcXAVeyHMY84hA8JvO1xgKh35R?usp=sharing" target="_blank">Lihat Dokumen Portofolio</a>
-    </div>
+    </section>
 
-    <div class="section contact">
+    <section class="section contact" data-aos="fade-up">
       <h2>Kontak</h2>
-      <p>WhatsApp: <a href="https://wa.me/6285728762595" target="_blank">0857-2876-2595</a></p>
-    </div>
+      <form action="https://formspree.io/f/xyzjlbgw" method="POST">
+        <input type="text" name="name" placeholder="Nama Anda" required />
+        <input type="email" name="_replyto" placeholder="Email Anda" required />
+        <textarea name="message" rows="4" placeholder="Pesan Anda" required></textarea>
+        <button type="submit">Kirim Pesan</button>
+      </form>
+      <p>Atau hubungi via WhatsApp: <a href="https://wa.me/6285728762595">0857-2876-2595</a></p>
+    </section>
   </div>
 
   <footer>
     &copy; 2025 Lutfi Rochman. Semua hak dilindungi.
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
