@@ -6,11 +6,9 @@
   <title>Lutfi Rochman - Galeri</title>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
   <style>
-
 html, body {
   height: 100%;
 }
-
 .wrapper {
   min-height: 100%;
   display: flex;
@@ -19,237 +17,237 @@ html, body {
 .wrapper > *:last-child {
   margin-top: auto;
 }
-
-    body, html {
-      margin:0;
-      padding:0;
-      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background:#000;
-      color:#fff;
-      scroll-behavior:smooth;
-    }
-    header {
-      padding:80px 20px 40px;
-      text-align:center;
-      background:#111;
-    }
-    header h1 {
-      font-size:2.5em;
-      margin:0;
-    }
-    section {
-      padding:40px 20px;
-      max-width:1000px;
-      margin:auto;
-    }
-    section h2 {
-      font-size:2em;
-      border-bottom:2px solid #00ffd5;
-      display:inline-block;
-      margin-bottom:20px;
-    }
-    .gallery-grid {
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-      gap:20px;
-    }
-    .gallery-grid img {
-      width:100%;
-      display:block;
-      object-fit:cover;
-      border-radius:8px;
-      transition:transform 0.3s ease;
-    }
-    .gallery-grid img:hover {
-      transform:scale(1.05);
-    }
-
-    footer {
-      text-align:center;
-      padding:30px;
-      background:#111;
-      font-size:0.9em;
-    }
-    .logo-spacex {
-      font-weight:700;
-      font-size:1.5em;
-      letter-spacing:4px;
-      color:#fff;
-      text-transform:uppercase;
-      position:relative;
-      display:inline-block;
-    }
-    .logo-spacex span {
-      position:relative;
-      color:#00ffd5;
-    }
-    .logo-spacex span::after {
-      content:"";
-      position:absolute;
-      width:35px;
-      height:2px;
-      background:#00ffd5;
-      top:45%;
-      left:2px;
-      transform:rotate(25deg);
-    }
-    /* Navbar Base */
-    #navbar {
-      position:fixed;
-      top:0;
-      width:100%;
-      background:rgba(0,0,0,0.85);
-      transition:top 0.3s ease, opacity 0.3s ease;
-      z-index:999;
-    }
-    .nav-container {
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:10px 20px;
-      max-width:1200px;
-      margin:auto;
-    }
-    .nav-links {
-      list-style:none;
-      display:flex;
-      margin:0;
-      padding:0;
-    }
-    .nav-links li {
-      margin-left:20px;
-    }
-    .nav-links li a {
-      position:relative;
-      color:#fff;
-      text-decoration:none;
-      font-weight:bold;
-      padding:5px 0;
-      transition:color 0.3s ease;
-    }
-    .nav-links li a::after {
-      content:"";
-      position:absolute;
-      left:0;
-      bottom:0;
-      height:2px;
-      width:100%;
-      background:#00ffd5;
-      transform:scaleX(0);
-      transform-origin:left;
-      transition:transform 0.3s ease, transform-origin 0s 0.3s;
-    }
-    .nav-links li a:hover::after {
-      transform:scaleX(1);
-      transform-origin:left;
-      transition:transform 0.3s ease;
-    }
-    .nav-links li a:not(:hover)::after {
-      transform-origin:right;
-      transition:transform 0.3s ease, transform-origin 0s;
-    }
-    .menu-icon {
-      display:none;
-      font-size:1.8em;
-      color:#fff;
-      cursor:pointer;
-    }
-    @media(max-width:768px){
-      .nav-links {
-        position:absolute;
-        top:60px;
-        right:20px;
-        background:rgba(0,0,0,0.95);
-        border-radius:4px;
-        padding:10px 15px;
-        flex-direction:column;
-        align-items:flex-end;
-        text-align:right;
-        width:max-content;
-        transform:translateY(-20px);
-        opacity:0;
-        pointer-events:none;
-        transition:transform 0.3s ease, opacity 0.3s ease;
-      }
-      .nav-links.show {
-        transform:translateY(0);
-        opacity:1;
-        pointer-events:auto;
-      }
-      .nav-links li {
-        margin:10px 0;
-        white-space:nowrap;
-      }
-      .menu-icon {
-        display:block;
-      }
-    }
+body, html {
+  margin:0;
+  padding:0;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background:#000;
+  color:#fff;
+  scroll-behavior:smooth;
+}
+header {
+  padding:80px 20px 40px;
+  text-align:center;
+  background:#111;
+}
+header h1 {
+  font-size:2.5em;
+  margin:0;
+}
+section {
+  padding:40px 20px;
+  max-width:1000px;
+  margin:auto;
+}
+section h2 {
+  font-size:2em;
+  border-bottom:2px solid #00ffd5;
+  display:inline-block;
+  margin-bottom:20px;
+}
+.gallery-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:20px;
+}
+.gallery-grid img {
+  width:100%;
+  display:block;
+  object-fit:cover;
+  border-radius:8px;
+  transition:transform 0.3s ease;
+}
+.gallery-grid img:hover {
+  transform:scale(1.05);
+}
+footer {
+  text-align:center;
+  padding:30px;
+  background:#111;
+  font-size:0.9em;
+}
+.logo-spacex {
+  font-weight:700;
+  font-size:1.5em;
+  letter-spacing:4px;
+  color:#fff;
+  text-transform:uppercase;
+  position:relative;
+  display:inline-block;
+}
+.logo-spacex span {
+  position:relative;
+  color:#00ffd5;
+}
+.logo-spacex span::after {
+  content:"";
+  position:absolute;
+  width:35px;
+  height:2px;
+  background:#00ffd5;
+  top:45%;
+  left:2px;
+  transform:rotate(25deg);
+}
+/* Navbar Base */
+#navbar {
+  position:fixed;
+  top:0;
+  width:100%;
+  background:rgba(0,0,0,0.85);
+  transition:top 0.3s ease, opacity 0.3s ease;
+  z-index:999;
+}
+.nav-container {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 20px;
+  max-width:1200px;
+  margin:auto;
+}
+.nav-links {
+  list-style:none;
+  display:flex;
+  margin:0;
+  padding:0;
+}
+.nav-links li {
+  margin-left:20px;
+}
+.nav-links li a {
+  position:relative;
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+  padding:5px 0;
+  transition:color 0.3s ease;
+}
+.nav-links li a::after {
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  height:2px;
+  width:100%;
+  background:#00ffd5;
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform 0.3s ease, transform-origin 0s 0.3s;
+}
+.nav-links li a:hover::after {
+  transform:scaleX(1);
+  transform-origin:left;
+  transition:transform 0.3s ease;
+}
+.nav-links li a:not(:hover)::after {
+  transform-origin:right;
+  transition:transform 0.3s ease, transform-origin 0s;
+}
+.menu-icon {
+  display:none;
+  font-size:1.8em;
+  color:#fff;
+  cursor:pointer;
+}
+@media(max-width:768px){
+  .nav-links {
+    position:absolute;
+    top:60px;
+    right:20px;
+    background:rgba(0,0,0,0.95);
+    border-radius:4px;
+    padding:10px 15px;
+    flex-direction:column;
+    align-items:flex-end;
+    text-align:right;
+    width:max-content;
+    transform:translateY(-20px);
+    opacity:0;
+    pointer-events:none;
+    transition:transform 0.3s ease, opacity 0.3s ease;
+  }
+  .nav-links.show {
+    transform:translateY(0);
+    opacity:1;
+    pointer-events:auto;
+  }
+  .nav-links li {
+    margin:10px 0;
+    white-space:nowrap;
+  }
+  .menu-icon {
+    display:block;
+  }
+}
   </style>
 </head>
 <body>
 
-  <div id="include-navbar"></div>
+<!-- Navbar -->
+<nav id="navbar" class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo-spacex">LUTFI<span>R</span></a>
+    <div class="menu-icon">&#9776;</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="index.html#about">Tentang</a></li>
+      <li><a href="index.html#skills">Keahlian</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="galeri.html">Galeri</a></li>
+      <li><a href="index.html#contact">Kontak</a></li>
+    </ul>
+  </div>
+</nav>
 
-  <header>
-    <h1 data-aos="fade-down">Galeri</h1>
-  </header>
+<header>
+  <h1 data-aos="fade-down">Galeri</h1>
+</header>
 
-  <section data-aos="fade-up">
-    <h2>Dokumentasi</h2>
-    <div class="gallery-grid">
-      <img src="images/computer.jpg" alt="Computer">
-      <img src="images/networking.jpg" alt="Networking">
-      <img src="images/technology.jpg" alt="Technology">
-      <img src="images/server.jpg" alt="Server">
-      <img src="images/laptop.jpg" alt="Laptop">
-      <img src="images/programming.jpg" alt="Programming">
-      <img src="images/surveillance.jpg" alt="Surveillance">
-      <img src="images/security.jpg" alt="Security">
-    </div>
-  </section>
+<section data-aos="fade-up">
+  <h2>Dokumentasi</h2>
+  <div class="gallery-grid">
+    <img src="images/computer.jpg" alt="Computer">
+    <img src="images/networking.jpg" alt="Networking">
+    <img src="images/technology.jpg" alt="Technology">
+    <img src="images/server.jpg" alt="Server">
+    <img src="images/laptop.jpg" alt="Laptop">
+    <img src="images/programming.jpg" alt="Programming">
+    <img src="images/surveillance.jpg" alt="Surveillance">
+    <img src="images/security.jpg" alt="Security">
+  </div>
+</section>
 
-  <div id="include-footer"></div>
+<!-- Footer -->
+<footer>
+  &copy; 2025 Lutfi Rochman. All Rights Reserved.
+</footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ once: false });
-  </script>
-  <script>
-    function loadHTML(id, url) {
-      fetch(url)
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById(id).innerHTML = data;
-        })
-        .then(() => {
-          if(id === "include-navbar"){
-            const menuIcon = document.querySelector(".menu-icon");
-            const navLinks = document.getElementById("navLinks");
-            menuIcon.addEventListener("click", () => {
-              navLinks.classList.toggle("show");
-            });
-            let prevScrollPos = window.pageYOffset;
-            window.onscroll = function() {
-              const currentScrollPos = window.pageYOffset;
-              const navbar = document.getElementById("navbar");
-              const isMenuOpen = navLinks.classList.contains("show");
-              if (!isMenuOpen) {
-                if (prevScrollPos > currentScrollPos) {
-                  navbar.style.top = "0";
-                  navbar.style.opacity = "1";
-                } else {
-                  navbar.style.top = "-80px";
-                  navbar.style.opacity = "0";
-                }
-              }
-              prevScrollPos = currentScrollPos;
-            }
-          }
-        });
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({ once: false });
+const menuIcon = document.querySelector(".menu-icon");
+const navLinks = document.getElementById("navLinks");
+menuIcon.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
+let prevScrollPos = window.pageYOffset;
+window.onscroll = function() {
+  const currentScrollPos = window.pageYOffset;
+  const navbar = document.getElementById("navbar");
+  const isMenuOpen = navLinks.classList.contains("show");
+  if (!isMenuOpen) {
+    if (prevScrollPos > currentScrollPos) {
+      navbar.style.top = "0";
+      navbar.style.opacity = "1";
+    } else {
+      navbar.style.top = "-80px";
+      navbar.style.opacity = "0";
     }
-    loadHTML("include-navbar", "navbar.html");
-    loadHTML("include-footer", "footer.html");
-  </script>
+  }
+  prevScrollPos = currentScrollPos;
+}
+</script>
 
 </body>
 </html>
