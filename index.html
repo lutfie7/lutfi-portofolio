@@ -212,7 +212,20 @@ section form button:hover {
 </head>
 <body>
 
-  <div id="include-navbar"></div>
+  <nav id="navbar" class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo-spacex">LUTFI<span>R</span></a>
+    <div class="menu-icon">&#9776;</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="index.html#about">Tentang</a></li>
+      <li><a href="index.html#skills">Keahlian</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="galeri.html">Galeri</a></li>
+      <li><a href="index.html#contact">Kontak</a></li>
+    </ul>
+  </div>
+</nav>
 
   <header>
     <h1 data-aos="fade-down">Lutfi Rochman</h1>
@@ -254,7 +267,10 @@ section form button:hover {
     <button type="submit">Kirim Pesan</button>
   </form>
 </section>
-  <div id="include-footer"></div>
+ 
+<footer>
+  &copy; 2025 Lutfi Rochman. All Rights Reserved.
+</footer>
 
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -294,8 +310,6 @@ section form button:hover {
           }
         });
     }
-    loadHTML("include-navbar", "navbar.html");
-    loadHTML("include-footer", "footer.html");
   </script>
 </body>
 </html>
